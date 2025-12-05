@@ -1,0 +1,93 @@
+/* 공통 스타일 */
+div.callout[data-callout="ex"],
+div.callout[data-callout="def"],
+div.callout[data-callout="prop"] {
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* 아이콘 숨기기 */
+div.callout[data-callout] .callout-icon {
+  display: none !important;
+}
+
+/* EX */
+div.callout[data-callout="ex"] {
+  --callout-bg: #f2f2f2 !important;
+  --callout-color: #000000 !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout[data-callout="ex"] .callout-title {
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px
+}
+
+div.callout[data-callout="ex"] .callout-title::before {
+    content: "Ex";
+    display: inline-block;
+    padding: 1px 18px;
+    border: 1px solid #000000;
+    color: #000000;
+    font-family:'Times New Roman', serif;
+}
+
+div.callout[data-callout="ex"] .callout-title-inner {
+    font-weight: bold !important;
+}
+
+/* DEF */
+div.callout[data-callout="def"] {
+  --callout-bg: #fdeeec !important;
+  --callout-color: #ff0000 !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout[data-callout="def"] .callout-title {
+  color: #ff0000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px
+}
+
+div.callout[data-callout="def"] .callout-title::before {
+    content: "Def";
+    display: inline-block;
+    padding: 1px 14.5px;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    font-family:'Times New Roman', serif;
+}
+
+div.callout[data-callout="def"] .callout-title-inner {
+    font-weight: bold !important;
+}
+
+/* PROP */
+div.callout[data-callout="prop"] {
+  --callout-bg: #e8f0ff !important;
+  --callout-color: #0000ff !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout[data-callout="prop"] .callout-title {
+  color: #0000ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px
+}
+
+div.callout[data-callout="prop"] .callout-title::before {
+    content: "Prop";
+    display: inline-block;
+    padding: 1px 10px;
+    border: 1px solid #0000ff;
+    color: #0000ff;
+    font-family:'Times New Roman', serif;
+}
+
+div.callout[data-callout="prop"] .callout-title-inner {
+    font-weight: bold !important;
+}

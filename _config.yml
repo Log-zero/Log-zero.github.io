@@ -1,0 +1,25 @@
+title: "My Blog"
+description: ""
+
+# Your site URL (for production)
+url: "https://log-zero.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Plugins (GitHub Pages supports only limited plugins)
+plugins:
+  - jekyll-feed
+
+# Permalinks: /year/month/day/title/
+permalink: /:categories/:year/:month/:day/:title/
+
+# Exclude these files from the build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

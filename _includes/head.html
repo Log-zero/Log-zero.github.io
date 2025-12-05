@@ -1,0 +1,3 @@
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+{% unless site.atom_feed.hide -%} {% endunless -%} {% if site.head_scripts -%} {% for script in site.head_scripts -%} {% endfor -%} {% endif -%}
