@@ -1,0 +1,76 @@
+/* 공통 스타일 */
+div.callout.ex,
+div.callout.def,
+div.callout.prop {
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* 아이콘 숨기기 */
+div.callout .callout-icon {
+  display: none !important;
+}
+
+/* EX */
+div.callout.ex {
+  --callout-bg: #f2f2f2 !important;
+  --callout-color: #000000 !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout.ex .callout-title {
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+div.callout.ex .callout-title::before {
+  content: "Ex";
+  display: inline-block;
+  padding: 1px 18px;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: 'Times New Roman', serif;
+}
+
+div.callout.ex .callout-title-inner {
+  font-weight: bold !important;
+}
+
+/* DEF */
+div.callout.def {
+  --callout-bg: #fdeeec !important;
+  --callout-color: #ff0000 !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout.def .callout-title {
+  color: #ff0000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+div.callout.def .callout-title::before {
+  content: "Def";
+  display: inline-block;
+  padding: 1px 14.5px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  font-family: 'Times New Roman', serif;
+}
+
+div.callout.def .callout-title-inner {
+  font-weight: bold !important;
+}
+
+/* PROP */
+div.callout.prop {
+  --callout-bg: #e8f0ff !important;
+  --callout-color: #0000ff !important;
+  background-color: var(--callout-bg) !important;
+}
+
+div.callout.prop .callout-title {
+  color: #0000ff
