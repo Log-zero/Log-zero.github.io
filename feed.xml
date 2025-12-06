@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://log-zero.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://log-zero.github.io/" rel="alternate" type="text/html" /><updated>2025-12-06T14:05:43+00:00</updated><id>https://log-zero.github.io/feed.xml</id><title type="html">My Blog</title><subtitle></subtitle><entry><title type="html">1. 명제, 논증</title><link href="https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/05/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D/" rel="alternate" type="text/html" title="1. 명제, 논증" /><published>2025-12-05T00:00:00+00:00</published><updated>2025-12-05T00:00:00+00:00</updated><id>https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/05/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D</id><content type="html" xml:base="https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/05/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D/"><![CDATA[<h4 id="가-논리학">(가) 논리학</h4>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://log-zero.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://log-zero.github.io/" rel="alternate" type="text/html" /><updated>2025-12-06T14:11:51+00:00</updated><id>https://log-zero.github.io/feed.xml</id><title type="html">My Blog</title><subtitle></subtitle><entry><title type="html">1. 명제, 논증</title><link href="https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/06/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D/" rel="alternate" type="text/html" title="1. 명제, 논증" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/06/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D</id><content type="html" xml:base="https://log-zero.github.io/a.%20%EC%88%98%EB%A6%AC%EB%85%BC%EB%A6%AC%ED%95%99,%20%EC%A7%91%ED%95%A9%EB%A1%A0/2025/12/06/%EB%AA%85%EC%A0%9C-%EB%85%BC%EC%A6%9D/"><![CDATA[<h4 id="가-논리학">(가) 논리학</h4>
 
 <p><span style="font-weight:bold">논리학(Logic)</span>은 무슨 학문인가? 이 질문에 대한 답이 사람마다 제각기 다른 관계로 논리학을 하나로 규정짓기는 어려워 보인다. 그러나 논리학이 <span style="font-weight:bold">추론</span>과 <span style="font-weight:bold">논증</span>을 다룬다는 점은 대부분 동의하는 분위기인 것 같다.</p>
 
@@ -39,11 +39,6 @@
     <li>오늘 저녁 뭐 먹었어?
 → 명제가 아닌 의문문</li>
   </ul>
-</blockquote>
-
-<blockquote>
-  <p>[!def] 정의
-A는 B이다.</p>
 </blockquote>
 
 <p>어떤 명제의 참/거짓을 그 명제의 <span style="font-weight:bold">진릿값(Truth Value)</span>이라 하고, 각각의 영문 앞글자를 따 참은 ‘$T$’, 거짓은 ‘$F$’로 쓴다.</p>
