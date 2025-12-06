@@ -15,7 +15,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-redirect-fro
+  - jekyll-redirect-from
 
 # Permalinks: /year/month/day/title/
 permalink: /:categories/:year/:month/:day/:title/
