@@ -1,18 +1,22 @@
-Jekyll::Hooks.register :documents, :post_convert do |doc|
-  content = doc.output
+Jekyll::Hooks.register :documents, :post_render do |doc|
+  html = doc.output
+  next if html.nil?
 
-  content.gsub!(/<p>\[!(\w+)\]\s*(.*?)<\/p>/i) do
-    type = $1.downcase
-    title = $2.strip
+  # > [!type] Title\nbody… 구조의 blockquote 전체 매칭
+  html.gsub!(/<blockquote>\s*<p>\s*\[!(\w+)\]\s*(.*?)<\/p>(.*?)<\/blockquote>/m) do
+    type  = Regexp.last_match(1).downcase
+    title = Regexp.last_match(2).strip
+    body  = Regexp.last_match(3).strip
 
     %Q(
 <div class="callout" data-callout="#{type}">
-  <div class="callout-title"><span class="callout-title-inner">#{title}</span></div>
+  <div class="callout-title">#{title}</div>
+  <div class="callout-content">
+    #{body}
+  </div>
+</div>
 )
   end
 
-  # callout 끝을 자동으로 닫기
-  content.gsub!(/(<\/div>\s*)?\z/, "</div>\n</div>")
-
-  doc.output = content
+  doc.output = html
 end
