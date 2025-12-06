@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+gem "jekyll"
 gem "kramdown-parser-gfm"
-gem "webrick", "~> 1.7"
+gem "webrick"
 gem "tzinfo-data"
 
 group :jekyll_plugins do
@@ -12,6 +12,5 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-include-cache"
   gem "jekyll-redirect-from"
-  gem "jekyll"
   gem "kramdown-math-katex"
 end
