@@ -4,6 +4,7 @@ gem "jekyll"
 gem "kramdown-parser-gfm"
 gem "webrick"
 gem "tzinfo-data"
+gem "minima", "~> 2.5"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
