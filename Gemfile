@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+gem "jekyll", "~> 4.3"
+gem "minima", "~> 2.5"
 gem "kramdown-parser-gfm"
 gem "webrick"
 gem "tzinfo-data"
-gem "minima", "~> 2.5"
+gem "bundler", "~> 2.5"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
@@ -13,5 +14,4 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-include-cache"
   gem "jekyll-redirect-from"
-  gem "kramdown-math-katex"
 end
