@@ -6,7 +6,6 @@ url: "https://log-zero.github.io"
 baseurl: ""
 
 # Build settings
-markdown: kramdown
 theme: minima
 
 # Plugins (GitHub Pages supports only limited plugins)
@@ -16,8 +15,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-  - jekyll-redirect-from
-  - kramdown-math-katex
+  - jekyll-redirect-fro
 
 # Permalinks: /year/month/day/title/
 permalink: /:categories/:year/:month/:day/:title/
