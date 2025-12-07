@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
 
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
-  </head>
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/quote.css' | relative_url }}">
+
+  {%- feed_meta -%}
+</head>
 
   <body>
 
