@@ -7,7 +7,7 @@ div.callout[data-callout="prop"] {
   margin: 1em 0;
   display: block;
   background-color: var(--callout-bg) !important;
-  color: var(--callout-color) !important;
+  color: #000000;
 }
 
 /* 아이콘 숨기기 */
@@ -40,22 +40,18 @@ div.callout[data-callout] .callout-title::before {
 div.callout[data-callout] .callout-title-inner {
     font-weight: bold !important;
     font-size: 1rem;
+    color: var(--callout-color);
 }
 
-/* 본문 내용 스타일 */
-div.callout[data-callout] .callout-content {
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-div.callout[data-callout] .callout-content p {
-    margin: 0.4em 0;
-}
 
 /* 목록 예쁘게 */
-div.callout[data-callout] .callout-content ul,
-div.callout[data-callout] .callout-content ol {
-  margin: 0.4em 0 0.6em 1.2em;
+div.callout[data-callout] > ul,
+div.callout[data-callout] > ol {
+  margin: 0.4em 0 0.6em 0;
+  padding-left: 1em;
+  color: #000;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 
@@ -80,13 +76,13 @@ div.callout[data-callout="ex"] .callout-title::before {
 ===================== */
 div.callout[data-callout="def"] {
   --callout-bg: #fdeeec;
-  --callout-color: #d40000;
+  --callout-color: #e03028;
 }
 
 div.callout[data-callout="def"] .callout-title::before {
     content: "Def";
-    border-color: #ff0000;
-    color: #ff0000;
+    border-color: #e03028;
+    color: #e03028;
     padding: 1px 14px;
 }
 
@@ -96,12 +92,12 @@ div.callout[data-callout="def"] .callout-title::before {
 ===================== */
 div.callout[data-callout="prop"] {
   --callout-bg: #e8f0ff;
-  --callout-color: #0025ff;
+  --callout-color: #1f44bf;
 }
 
 div.callout[data-callout="prop"] .callout-title::before {
     content: "Prop";
-    border-color: #0000ff;
-    color: #0000ff;
+    border-color: #1f44bf;
+    color: #1f44bf;
     padding: 1px 10px;
 }
