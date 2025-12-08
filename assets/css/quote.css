@@ -62,7 +62,6 @@ div.callout[data-callout] > ol {
 div.callout[data-callout] blockquote {
   margin: 0 !important;
   padding: 0 !important;
-  border-left: none !important;
 }
 
 div.callout[data-callout] blockquote p {
