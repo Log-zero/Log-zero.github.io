@@ -59,9 +59,14 @@ div.callout[data-callout] > ol {
 }
 
 /* 인용문 왼쪽 여백 제거 */
-.callout blockquote {
-  margin: 0;
-  padding: 0;
+div.callout[data-callout] blockquote {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-left: none !important;
+}
+
+div.callout[data-callout] blockquote p {
+  margin: 0 !important;
 }
 
 /* EX */
