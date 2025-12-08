@@ -24,3 +24,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+
+kramdown:
+  math_engine: null
