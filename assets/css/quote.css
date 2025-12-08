@@ -58,6 +58,11 @@ div.callout[data-callout] > ol {
   line-height: 1.5;
 }
 
+/* 인용문 왼쪽 여백 제거 */
+.callout blockquote {
+  margin: 0;
+  padding: 0;
+}
 
 /* EX */
 .markdown-body div.callout[data-callout="ex"],
