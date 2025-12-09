@@ -1,0 +1,52 @@
+/* Nimbus Roman Regular */
+@font-face {
+  font-family: 'Nimbus Roman';
+  font-weight: 400;
+  font-style: normal;
+  src: url('{{ "/assets/fonts/NimbusRoman-Regular.woff2" | relative_url }}') format("woff2");
+}
+
+/* Nimbus Roman Bold */
+@font-face {
+  font-family: 'Nimbus Roman';
+  font-weight: 700;
+  font-style: normal;
+  src: url('{{ "/assets/fonts/NimbusRoman-Bold.woff2" | relative_url }}') format("woff2");
+}
+
+/* KoPubWorld Dotum Light */
+@font-face {
+  font-family: 'KoPubWorld Dotum';
+  font-weight: 300;
+  font-style: normal;
+  src: url('{{ "/assets/fonts/KoPubWorldDotum-Light.woff2" | relative_url }}') format("woff2");
+}
+
+/* KoPubWorld Dotum Medium (기본) */
+@font-face {
+  font-family: 'KoPubWorld Dotum';
+  font-weight: 400;
+  font-style: normal;
+  src: url('{{ "/assets/fonts/KoPubWorldDotum-Medium.woff2" | relative_url }}') format("woff2");
+}
+
+/* KoPubWorld Dotum Bold */
+@font-face {
+  font-family: 'KoPubWorld Dotum';
+  font-weight: 700;
+  font-style: normal;
+  src: url('{{ "/assets/fonts/KoPubWorldDotum-Bold.woff2" | relative_url }}') format("woff2");
+}
+
+/* default font settings */
+html:lang(en), body:lang(en), *:lang(en) {
+  font-family: 'Nimbus Roman', serif !important;
+}
+
+html:lang(ko), body:lang(ko), *:lang(ko) {
+  font-family: 'KoPubWorld Dotum', sans-serif;
+}
+
+body {
+  font-family: 'Nimbus Roman', 'KoPubWorld Dotum', serif;
+}
