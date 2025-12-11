@@ -1,6 +1,6 @@
 /* Nimbus Roman Regular */
 @font-face {
-  font-family: 'Nimbus Roman';
+  font-family: 'NimbusRoman';
   font-weight: 400;
   font-style: normal;
   src: url('../fonts/NimbusRoman-Regular.woff2') format("woff2");
@@ -8,7 +8,7 @@
 
 /* Nimbus Roman Bold */
 @font-face {
-  font-family: 'Nimbus Roman';
+  font-family: 'NimbusRoman';
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/NimbusRoman-Bold.woff2') format("woff2");
@@ -16,23 +16,15 @@
 
 /* KoPubWorld Dotum Light */
 @font-face {
-  font-family: 'KoPubWorld Dotum';
+  font-family: 'KoPubWorldDotum';
   font-weight: 300;
   font-style: normal;
   src: url('../fonts/KoPubWorldDotum-Light.woff2') format("woff2");
 }
 
-/* KoPubWorld Dotum Medium */
-@font-face {
-  font-family: 'KoPubWorld Dotum';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/KoPubWorldDotum-Medium.woff2') format("woff2");
-}
-
 /* KoPubWorld Dotum Bold */
 @font-face {
-  font-family: 'KoPubWorld Dotum';
+  font-family: 'KoPubWorldDotum';
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/KoPubWorldDotum-Bold.woff2') format("woff2");
@@ -40,15 +32,15 @@
 
 /* 영어 기본 Nimbus, 한글은 KoPub */
 html {
-  font-family: 'KoPubWorld Dotum', 'Nimbus Roman', serif;
+  font-family: 'KoPubWorldDotum', 'NimbusRoman', serif;
 }
 
 /* 명시적 한국어 */
 :lang(ko) {
-  font-family: 'KoPubWorld Dotum', sans-serif !important;
+  font-family: 'KoPubWorldDotum', sans-serif !important;
 }
 
 /* 명시적 영어 */
 :lang(en) {
-  font-family: 'Nimbus Roman', serif !important;
+  font-family: 'NimbusRoman', serif !important;
 }
