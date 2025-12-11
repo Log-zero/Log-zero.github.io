@@ -17,9 +17,10 @@
 /* KoPubWorld Dotum Light */
 @font-face {
   font-family: 'KoPubWorldDotum';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   src: url('../fonts/KoPubWorldDotum-Light.woff2') format("woff2");
+  unicode-range: U+AC00-D7A3;
 }
 
 /* KoPubWorld Dotum Bold */
@@ -28,6 +29,7 @@
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/KoPubWorldDotum-Bold.woff2') format("woff2");
+  unicode-range: U+AC00-D7A3;
 }
 
 /* 영어 기본 Nimbus, 한글은 KoPub */
