@@ -40,14 +40,15 @@
 
 /* 영어 기본 Nimbus, 한글은 KoPub */
 html {
-  font-family: 'Nimbus Roman', 'KoPubWorld Dotum', serif;
+  font-family: 'KoPubWorld Dotum', 'Nimbus Roman', serif;
 }
 
-/* 명시적 언어 적용 */
-html:lang(ko), body:lang(ko), *:lang(ko) {
-  font-family: 'KoPubWorld Dotum', sans-serif;
+/* 명시적 한국어 */
+:lang(ko) {
+  font-family: 'KoPubWorld Dotum', sans-serif !important;
 }
 
-html:lang(en), body:lang(en), *:lang(en) {
-  font-family: 'Nimbus Roman', serif;
+/* 명시적 영어 */
+:lang(en) {
+  font-family: 'Nimbus Roman', serif !important;
 }
