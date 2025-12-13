@@ -3,6 +3,10 @@
   font-weight: 700;
 }
 
+.term .paren {
+  font-weight : 400;
+}
+
 .term :lang(en) {
   font-family: 'NimbusRoman', serif;
   font-weight: 400;

@@ -8,10 +8,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.term').forEach(el => {
-    el.innerHTML = el.textContent.replace(
-      /([A-Za-z][A-Za-z0-9\-]*)/g,
-      '<span lang="en">$1</span>'
-    );
+    el.innerHTML = el.innerHTML
+      .replace(/\(/g, '<span class="paren">(</span>')
+      .replace(/\)/g, '<span class="paren">)</span>');
   });
 });
 </script>
