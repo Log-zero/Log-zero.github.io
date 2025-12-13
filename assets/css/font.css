@@ -1,32 +1,39 @@
-/* Nimbus Roman Regular */
+/* KoPubWorldDotum (Korean) */
 @font-face {
-  font-family: 'NimbusRoman-Regular';
-  src: url('../fonts/NimbusRoman-Regular.woff2') format("woff2");
-  unicode-range: U+0000-024F;
-}
-
-/* Nimbus Roman Bold */
-@font-face {
-  font-family: 'NimbusRoman-Bold';
-  src: url('../fonts/NimbusRoman-Bold.woff2') format("woff2");
-  unicode-range: U+0000-024F;
-}
-
-/* KoPubWorld Dotum Light */
-@font-face {
-  font-family: 'KoPubWorldDotum-Light';
-  src: url('../fonts/KoPubWorldDotum-Light.woff2') format("woff2");
+  font-family: 'KoPub';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/KoPubWorldDotumLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
   unicode-range: U+AC00-D7A3;
 }
 
-/* KoPubWorld Dotum Bold */
 @font-face {
-  font-family: 'KoPubWorldDotum-Bold';
-  src: url('../fonts/KoPubWorldDotum-Bold.woff2') format("woff2");
+  font-family: 'KoPub';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/KoPubWorldDotumBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
   unicode-range: U+AC00-D7A3;
 }
 
-/* 영어 기본 Nimbus, 한글은 KoPub */
+/* TeX Gyre Termes (Latin) */
+@font-face {
+  font-family: 'Termes';
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/tex-gyre-termes/files/tex-gyre-termes-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0000-024F;
+}
+
+@font-face {
+  font-family: 'Termes';
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/tex-gyre-termes/files/tex-gyre-termes-latin-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  unicode-range: U+0000-024F;
+}
+
+/* default font settings */
 html {
-  font-family: 'KoPubWorldDotum-Light', 'NimbusRoman-Regular', serif;
+  font-family: 'KoPub', 'Termes', serif;
+  font-weight: 300;
 }
