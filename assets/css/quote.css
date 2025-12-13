@@ -41,8 +41,6 @@ div.callout[data-callout] .callout-title::before {
 /* 제목 텍스트 */
 .markdown-body div.callout[data-callout] .callout-title-inner,
 div.callout[data-callout] .callout-title-inner {
-  font-weight: bold !important;
-  font-size: 1rem;
   color: var(--callout-color);
 }
 
