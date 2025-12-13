@@ -2,7 +2,7 @@
 .markdown-body div.callout[data-callout],
 div.callout[data-callout] {
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px 25px;
   margin: 1em 0;
   display: block;
   background-color: var(--callout-bg) !important;
