@@ -7,9 +7,9 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.term').forEach(el => {
+  document.querySelectorAll('.term, p, li').forEach(el => {
     el.innerHTML = el.textContent.replace(
-      /([A-Za-z][A-Za-z0-9\-]*)/g,
+      /\b([A-Za-z][A-Za-z0-9\s]*)\b/g,
       '<span lang="en">$1</span>'
     );
   });
