@@ -7,7 +7,6 @@ div.callout[data-callout] {
   display: block;
   background-color: var(--callout-bg) !important;
   color: #000000;
-  font-family: 'KoPubDotum', serif;
 }
 
 /* 아이콘 숨기기 */
