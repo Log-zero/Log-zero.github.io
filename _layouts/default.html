@@ -7,15 +7,12 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.post-content .term, .post-content p, .post-content li')
-    .forEach(el => {
-      if (el.closest('code, pre, mjx-container')) return;
-
-      el.innerHTML = el.textContent.replace(
-        /\b([A-Za-z][A-Za-z0-9\-]*)\b/g,
-        '<span lang="en">$1</span>'
-      );
-    });
+  document.querySelectorAll('.term').forEach(el => {
+    el.innerHTML = el.textContent.replace(
+      /([A-Za-z][A-Za-z0-9\-]*)/g,
+      '<span lang="en">$1</span>'
+    );
+  });
 });
 </script>
 
