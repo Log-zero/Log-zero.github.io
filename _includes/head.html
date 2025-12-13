@@ -9,14 +9,32 @@
   <link rel="stylesheet" href="{{ '/assets/css/font.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/term.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
-
-  {%- feed_meta -%}
+  <link rel="stylesheet" href="{{ '/assets/normalize.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/open-color.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/monophase/styles.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
   
   <script>
 window.MathJax = {
   tex: { inlineMath: [['$', '$']] }
 };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
   
+{% include custom-head.html %}
+  
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea']
+  }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>

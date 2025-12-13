@@ -24,26 +24,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-  <body>
+  <div class="container">
+      {% include header.html %}
 
-    <header class="site-header">
-      <div class="wrapper">
-        <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-      </div>
-    </header>
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+      <main>
         {{ content }}
-      </div>
-    </main>
+      </main>
 
-    <footer class="site-footer">
-      <div class="wrapper">
-        <p>{{ site.title }} © {{ site.time | date: "%Y" }}</p>
-      </div>
-    </footer>
+      {% include footer.html %}
+    </div>
 
+    {% if page.math %}
+      {% include mathjax.html %}
+    {% endif %}
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
   </body>
 
 </html>
