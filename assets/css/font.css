@@ -54,6 +54,7 @@ html {
 /* 기본은 한글 */
 body {
   font-family: 'KoPub', serif;
+  font-weight: 300;
 }
 
 /* 영어 전용 */
