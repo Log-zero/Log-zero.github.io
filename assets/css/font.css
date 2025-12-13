@@ -6,7 +6,6 @@
   src: url('../fonts/KoPubWorldDotum-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
-  unicode-range: U+AC00-D7A3;
 }
 
 @font-face {
@@ -14,7 +13,6 @@
   src: url('../fonts/KoPubWorldDotum-Medium.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  unicode-range: U+AC00-D7A3;
 }
 
 @font-face {
@@ -22,7 +20,6 @@
   src: url('../fonts/KoPubWorldDotum-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  unicode-range: U+AC00-D7A3;
 }
 
 
