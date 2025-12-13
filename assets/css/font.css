@@ -35,5 +35,8 @@
 /* default font settings */
 html {
   font-family: 'KoPub', 'Termes', serif;
+}
+
+body {
   font-weight: 300;
 }
