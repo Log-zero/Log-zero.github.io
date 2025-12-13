@@ -1,10 +1,12 @@
-/* ===== Korean: KoPub ===== */
+/* =========================
+   Korean — KoPubWorldDotum
+   ========================= */
 @font-face {
   font-family: 'KoPub';
   src: url('/assets/fonts/KoPubWorldDotum-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
-  unicode-range: U+AC00-D7A3; /* Hangul */
+  unicode-range: U+AC00-D7A3;
 }
 
 @font-face {
@@ -23,26 +25,30 @@
   unicode-range: U+AC00-D7A3;
 }
 
-/* ===== Latin: TeX Gyre Termes ===== */
+
+/* =========================
+   Latin — Nimbus Roman
+   ========================= */
 @font-face {
-  font-family: 'Termes';
-  src: url('https://cdn.jsdelivr.net/npm/@fontsource/tex-gyre-termes/files/tex-gyre-termes-latin-400-normal.woff2')
-    format('woff2');
+  font-family: 'NimbusRoman';
+  src: url('/assets/fonts/NimbusRoman-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  unicode-range: U+0000-024F; /* Latin */
+  unicode-range: U+0000-024F;
 }
 
 @font-face {
-  font-family: 'Termes';
-  src: url('https://cdn.jsdelivr.net/npm/@fontsource/tex-gyre-termes/files/tex-gyre-termes-latin-700-normal.woff2')
-    format('woff2');
+  font-family: 'NimbusRoman';
+  src: url('/assets/fonts/NimbusRoman-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   unicode-range: U+0000-024F;
 }
 
-/* ===== Global ===== */
+
+/* =========================
+   Global
+   ========================= */
 html, body {
-  font-family: 'KoPub', 'Termes', serif;
+  font-family: 'KoPub', 'NimbusRoman', serif;
 }
