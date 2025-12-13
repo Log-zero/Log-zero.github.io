@@ -49,6 +49,17 @@
 /* =========================
    Global
    ========================= */
-html, body {
+html {
   font-family: 'KoPub', 'NimbusRoman', serif;
 }
+
+/* 기본은 한글 */
+body {
+  font-family: 'KoPub', serif;
+}
+
+/* 영어 전용 */
+:lang(en) {
+  font-family: 'NimbusRoman', serif;
+}
+
