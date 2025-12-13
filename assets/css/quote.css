@@ -30,9 +30,9 @@ div.callout[data-callout] .callout-title::before {
   display: inline-block;
   border: 1px solid currentColor;
   padding: 1px 14px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'NimbusRoman', serif;
   font-size: 0.9rem;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.2;
   border-radius: 3px;
   flex-shrink: 0;
