@@ -8,7 +8,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.term, p, li').forEach(el => {
+    if (el.closest('a, nav, header, footer')) return;
     if (el.closest('code, pre, mjx-container')) return;
+
     el.innerHTML = el.textContent.replace(
       /\b([A-Za-z][A-Za-z0-9\-]*)\b/g,
       '<span lang="en">$1</span>'
