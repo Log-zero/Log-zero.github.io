@@ -5,6 +5,17 @@
   {% include head.html %}
 </head>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.term').forEach(el => {
+    el.innerHTML = el.textContent.replace(
+      /([A-Za-z][A-Za-z0-9\-]*)/g,
+      '<span lang="en">$1</span>'
+    );
+  });
+});
+</script>
+
   <body>
 
     <header class="site-header">

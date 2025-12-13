@@ -1,3 +1,9 @@
 .term {
-  font-weight: 700 !important;
+  font-weight: 700;
+  font-family: 'KoPub', serif;
+}
+
+.term :lang(en) {
+  font-family: 'NimbusRoman', serif;
+  font-weight: 700;
 }
