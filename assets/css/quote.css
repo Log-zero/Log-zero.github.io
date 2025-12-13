@@ -3,7 +3,7 @@
 div.callout[data-callout] {
   border-radius: 5px;
   padding: 15px 25px;
-  margin: 2em 0;
+  margin: 1.5em 0 !important;
   display: block;
   background-color: var(--callout-bg) !important;
   color: #000000;
