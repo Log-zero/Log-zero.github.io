@@ -1,8 +1,8 @@
 /* KoPubWorldDotum (Korean) */
 @font-face {
   font-family: 'KoPub';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/KoPubWorldDotumMedium.woff') format('woff');
-  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/KoPubWorldDotumLight.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
   unicode-range: U+AC00-D7A3;
 }
@@ -35,5 +35,8 @@
 /* default font settings */
 html {
   font-family: 'KoPub', 'Termes', serif;
-  font-weight: 400;
+}
+
+body {
+  font-family: KoPub !important;
 }
