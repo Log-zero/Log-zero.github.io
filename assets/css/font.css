@@ -2,12 +2,14 @@
 @font-face {
   font-family: 'NimbusRoman-Regular';
   src: url('../fonts/NimbusRoman-Regular.woff2') format("woff2");
+  unicode-range: U+0000-024F;
 }
 
 /* Nimbus Roman Bold */
 @font-face {
   font-family: 'NimbusRoman-Bold';
   src: url('../fonts/NimbusRoman-Bold.woff2') format("woff2");
+  unicode-range: U+0000-024F;
 }
 
 /* KoPubWorld Dotum Light */
