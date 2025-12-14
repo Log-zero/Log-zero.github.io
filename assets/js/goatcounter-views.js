@@ -1,5 +1,5 @@
 (function () {
-  const site = "https://log-zero.goatcounter.com";
+  const site = "https://rlaalstjd423.goatcounter.com";
   const path = location.pathname;
   const url = site + "/counter/" + encodeURIComponent(path) + ".json";
 
