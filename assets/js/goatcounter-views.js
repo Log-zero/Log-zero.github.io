@@ -10,8 +10,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const path = getPath();
-    const encoded = encodeURIComponent(path);
-    const url = site + "/counter/" + encoded + ".json";
+    const url = site + "/counter/" + encodeURIComponent(path) + ".json";
 
     fetch(url)
       .then(res => {
@@ -22,10 +21,9 @@
         const el = document.getElementById("goatcounter-views");
         if (el) el.textContent = data.count ?? 0;
       })
-      .catch(err => {
+      .catch(() => {
         const el = document.getElementById("goatcounter-views");
         if (el) el.textContent = "0";
-        console.error("GoatCounter error:", err);
       });
   });
 })();
