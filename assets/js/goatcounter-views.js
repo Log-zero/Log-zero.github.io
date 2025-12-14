@@ -1,15 +1,10 @@
 (function () {
   const site = "https://rlaalstjd423.goatcounter.com";
 
-  function getPath() {
-    let path = location.pathname;
-    if (!path.startsWith("/")) path = "/" + path;
-    if (!path.endsWith("/")) path += "/";
-    return path;
-  }
-
   document.addEventListener("DOMContentLoaded", function () {
-    const path = getPath();
+    // GoatCounter에 실제로 저장된 path 그대로 사용
+    let path = location.pathname.replace(/\/$/, "");
+
     const url = site + "/counter/" + encodeURIComponent(path) + ".json";
 
     fetch(url)
