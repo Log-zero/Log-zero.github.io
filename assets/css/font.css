@@ -29,14 +29,12 @@ body {
   font-weight: inherit;
 }
 
-/* MathJax 수식 크기 본문과 통일 */
+/* MathJax 크기 통일 */
 body mjx-container {
   font-size: 1em !important;
 }
 
-/* Mathjax 수식 뒤에 공백 주기 */
+/* 수식 뒤 얇은 공백 */
 mjx-container[display="false"]::after {
-  content: "";
-  display: inline-block;
-  width: 0.1em;
+  content: "\2009";
 }
