@@ -35,11 +35,11 @@ body mjx-container {
 }
 
 /* 수식 뒤 얇은 공백 */
-mjx-container[display="false"] {
+mjx-container[data-mjx-display="false"] {
   display: inline-block !important;
 }
 
-mjx-container[display="false"]::after {
+mjx-container[data-mjx-display="false"]::after {
   content: "";
   display: inline-block;
   width: 0.2em;
