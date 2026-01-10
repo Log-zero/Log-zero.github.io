@@ -30,7 +30,7 @@ body {
 }
 
 /* MathJax 수식 크기 본문과 통일 */
-mjx-container.MathJax {
+mjx-container * {
   font-size: 1em !important;
 }
 
