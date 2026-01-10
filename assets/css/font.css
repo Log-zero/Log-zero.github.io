@@ -36,5 +36,5 @@ body mjx-container {
 
 /* 수식 뒤 얇은 공백 */
 mjx-container[display="false"] {
-  margin-right: 0.15em;
+  margin-right: 0.25em;
 }
