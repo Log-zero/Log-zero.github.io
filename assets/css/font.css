@@ -36,5 +36,5 @@ body mjx-container {
 
 /* Mathjax 수식 뒤에 공백 주기 */
 mjx-container[display="false"] mjx-math {
-  padding-right: 0.15em;
+  padding-right: 0.1em;
 }
