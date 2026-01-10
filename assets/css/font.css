@@ -33,14 +33,3 @@ body {
 body mjx-container {
   font-size: 1em !important;
 }
-
-/* 수식 뒤 얇은 공백 */
-mjx-container[data-mjx-display="false"] {
-  display: inline-block !important;
-}
-
-mjx-container[data-mjx-display="false"]::after {
-  content: "";
-  display: inline-block;
-  width: 0.2em;
-}
