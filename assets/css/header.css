@@ -7,3 +7,11 @@
   font-family: 'NimbusRoman', serif !important;
   font-weight: 700 !important;
 }
+
+.post-category {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
