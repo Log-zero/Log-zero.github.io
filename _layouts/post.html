@@ -30,19 +30,24 @@ layout: default
         {%- if forloop.last == false %}, {% endif -%}
       {% endfor %}
     {%- endif -%}
-    {% if page.categories.size > 0 %}
+{% if page.categories.size > 0 %}
   <span> • </span>
   <span class="post-categories-section">
     <i class="post-categories-icon fas fa-folder"></i>
     <ul class="post-categories">
       {%- for category in page.categories -%}
-        <li>
-          {% assign category_slug = category %}
+        {% assign slugified_category = category | slugify %}
+        {% assign display_name = site.data.categories[category] | default: category %}
 
-          <a class="post-category"
-             href="/category/{{ category_slug | relative_url }}">
-            {{ site.data.categories[category_slug] | default: category_slug }}
-          </a>
+        <li>
+          {%- if site.categories_path -%}
+            <a class="post-category"
+               href="{{ site.categories_path | relative_url }}#{{ slugified_category }}">
+              {{ display_name }}
+            </a>
+          {%- else -%}
+            <span class="post-category">{{ display_name }}</span>
+          {%- endif -%}
 
           {%- if page.subcategory -%}
             <span class="post-subcategory">
