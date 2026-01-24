@@ -15,8 +15,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
 
-# Permalinks: /year/month/day/title/
-permalink: /:categories/:year/:month/:day/:title/
+# Permalinks: /year/month/day/
+permalink: /:year/:month/:day/
 
 # Exclude these files from the build
 exclude:
