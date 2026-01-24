@@ -14,3 +14,14 @@
 @import "custom/module";
 @import "custom/image";
 @import "custom/adsense";
+
+/* 카테고리 링크: 글자 끝까지만 밑줄 */
+.post-categories a.post-category {
+  display: inline !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  text-decoration: none !important;
+  border-bottom: 1px solid currentColor;
+  line-height: 1;
+}
