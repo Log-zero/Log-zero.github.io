@@ -30,15 +30,6 @@ layout: default
         {%- if forloop.last == false %}, {% endif -%}
       {% endfor %}
     {%- endif -%}
-    {% if page.categories %}
-  <div class="post-categories">
-    {% for cat in page.categories %}
-      <a href="/category/{{ cat }}/" class="post-category">
-        {{ site.data.categories[cat] | default: cat }}
-      </a>
-    {% endfor %}
-  </div>
-{% endif %}
     {% if page.categories.size > 0 %}
   <span> • </span>
   <span class="post-categories-section">
