@@ -25,3 +25,14 @@
   border-bottom: 1px solid currentColor;
   line-height: 1;
 }
+
+/* 카테고리 링크 밑줄: box-shadow 완전 제거 */
+.post-categories a.post-category {
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
