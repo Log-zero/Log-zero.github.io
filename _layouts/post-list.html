@@ -2,8 +2,20 @@
 layout: default
 ---
 
+{% assign posts = site.posts %}
+
 {% if page.category %}
   {% assign posts = site.categories[page.category] %}
+{% endif %}
+
+{%- comment -%}
+================================
+1️⃣ 카테고리 인덱스 페이지
+   (subcategory만 표시)
+================================
+{%- endcomment -%}
+
+{% if page.category and page.subcategory == nil %}
 
   {% assign subs = "" | split: "" %}
   {% for post in posts %}
@@ -14,24 +26,52 @@ layout: default
     {% endif %}
   {% endfor %}
 
-  {% if subs.size > 0 %}
-    <div class="posts">
-      {% for sub in subs %}
-        {% assign label = site.data.subcategories[page.category][sub] | default: sub %}
+  <div class="posts">
+    {% for sub in subs %}
+      {% assign label = site.data.subcategories[page.category][sub] | default: sub %}
 
-        <div class="post">
-          <h2 class="post-title">
-            <a href="{{ '/categories/' | append: page.category | append: '/' | append: sub | append: '/' | relative_url }}">
-              {{ label }}
-            </a>
-          </h2>
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ '/categories/' | append: page.category | append: '/' | append: sub | append: '/' | relative_url }}">
+            {{ label }}
+          </a>
+        </h2>
 
-          <time class="post-meta">
-            {{ posts | where: "subcategory", sub | size }} posts
-          </time>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
+        <time class="post-meta">
+          {{ posts | where: "subcategory", sub | size }} posts
+        </time>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endif %}
+
+{%- comment -%}
+================================
+2️⃣ Subcategory 페이지
+   (글 목록 표시)
+================================
+{%- endcomment -%}
+
+{% if page.category and page.subcategory %}
+
+  {% assign posts = posts | where: "subcategory", page.subcategory %}
+
+  <div class="posts">
+    {% for post in posts %}
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+
+        <time datetime="{{ post.date | date_to_xmlschema }}"
+              class="post-meta">
+          {{ post.date | date_to_string }}
+        </time>
+      </div>
+    {% endfor %}
+  </div>
 
 {% endif %}
