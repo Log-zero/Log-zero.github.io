@@ -8,9 +8,49 @@ layout: default
   {% assign posts = site.posts %}
 {% endif %}
 
+{%- comment -%} ======================
+   Subcategory 목록
+====================== {%- endcomment -%}
+
+{% if page.category %}
+  {% assign subs = "" | split: "" %}
+
+  {% for post in posts %}
+    {% if post.subcategory %}
+      {% unless subs contains post.subcategory %}
+        {% assign subs = subs | push: post.subcategory %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% if subs.size > 0 %}
+    <div class="posts">
+      {% for sub in subs %}
+        {% assign label = site.data.subcategories[page.category][sub] | default: sub %}
+
+        <div class="post">
+          <h2 class="post-title">
+            <a href="#sub-{{ sub }}">
+              {{ label }}
+            </a>
+          </h2>
+
+          <time class="post-meta">
+            {{ posts | where: "subcategory", sub | size }} posts
+          </time>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}
+
+{%- comment -%} ======================
+   글 목록 (기존)
+====================== {%- endcomment -%}
+
 <div class="posts">
   {% for post in posts %}
-    <div class="post">
+    <div class="post" id="sub-{{ post.subcategory }}">
       <h2 class="post-title">
         <a href="{{ post.url | relative_url }}">
           {{ post.title }}
@@ -20,6 +60,9 @@ layout: default
       <time datetime="{{ post.date | date_to_xmlschema }}"
             class="post-meta">
         {{ post.date | date_to_string }}
+        {% if post.subcategory %}
+          · {{ site.data.subcategories[page.category][post.subcategory] }}
+        {% endif %}
       </time>
     </div>
   {% endfor %}
