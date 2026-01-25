@@ -17,4 +17,4 @@ permalink: /categories/set-theory/
     </span>
   </li>
 {% endfor %}
-</ul
+</ul>
