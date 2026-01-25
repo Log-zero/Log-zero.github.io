@@ -37,7 +37,7 @@ layout: default
     <i class="post-categories-icon fas fa-folder"></i>
     <ul class="post-categories">
       {% for category in page.categories %}
-      {% assign slug = category | slugify %}
+      {% assign slug = category %}
       {% assign display_name = site.data.categories[slug] | default: category %}
 
       <li>
