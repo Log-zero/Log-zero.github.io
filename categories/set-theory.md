@@ -4,7 +4,6 @@ title: A. 집합론
 permalink: /categories/set-theory/
 ---
 
-{% raw %}
 {% assign category = "set-theory" %}
 
 <ul class="post-list">
@@ -18,5 +17,4 @@ permalink: /categories/set-theory/
     </span>
   </li>
 {% endfor %}
-</ul>
-{% endraw %}
+</ul
