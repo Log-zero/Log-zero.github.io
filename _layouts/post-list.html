@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<div class="post-list">
+  {% assign posts = page.posts | default: site.posts %}
+
+  {% for post in posts %}
+    <article class="post-card">
+      <a class="post-card-link" href="{{ post.url | relative_url }}">
+        <div class="post-card-content">
+          <h2 class="post-card-title">{{ post.title }}</h2>
+          <time class="post-card-date">
+            {{ post.date | date: "%d %b %Y" }}
+          </time>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</div>

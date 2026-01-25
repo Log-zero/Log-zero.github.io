@@ -1,24 +1,6 @@
 ---
-layout: page
+layout: post-list
 title: A. 집합론
 permalink: /categories/set-theory/
+posts: "{{ site.categories['set-theory'] }}"
 ---
-
-<div class="post-list">
-{% assign posts = site.categories["set-theory"] | sort: "date" | reverse %}
-{% for post in posts %}
-  <article class="post-card">
-    <a class="post-card-link" href="{{ post.url | relative_url }}">
-      <div class="post-card-content">
-        <h2 class="post-card-title">
-          {{ post.title }}
-        </h2>
-
-        <time class="post-card-date">
-          {{ post.date | date: "%d %b %Y" }}
-        </time>
-      </div>
-    </a>
-  </article>
-{% endfor %}
-</div>
