@@ -2,17 +2,13 @@
 layout: default
 ---
 
-<p style="color:red">
-  page.posts = {{ page.posts | inspect }}
-</p>
+{% if page.category %}
+  {% assign posts = site.categories[page.category] %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
 <div class="posts">
-  {% assign posts = page.posts | default: site.posts %}
-
-  {% if paginator and page.posts == nil %}
-    {% assign posts = paginator.posts %}
-  {% endif %}
-
   {% for post in posts %}
     <div class="post">
       <h2 class="post-title">
@@ -28,25 +24,3 @@ layout: default
     </div>
   {% endfor %}
 </div>
-
-{% if paginator and page.posts == nil %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="pagination-item older"
-         href="{{ paginator.next_page_path | relative_url }}">
-        Older
-      </a>
-    {% else %}
-      <span class="pagination-item older">Older</span>
-    {% endif %}
-
-    {% if paginator.previous_page %}
-      <a class="pagination-item newer"
-         href="{{ paginator.previous_page_path | relative_url }}">
-        Newer
-      </a>
-    {% else %}
-      <span class="pagination-item newer">Newer</span>
-    {% endif %}
-  </div>
-{% endif %}
