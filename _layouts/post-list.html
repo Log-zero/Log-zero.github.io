@@ -4,17 +4,8 @@ layout: default
 
 {% if page.category %}
   {% assign posts = site.categories[page.category] %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
 
-{%- comment -%} ======================
-   Subcategory 목록
-====================== {%- endcomment -%}
-
-{% if page.category %}
   {% assign subs = "" | split: "" %}
-
   {% for post in posts %}
     {% if post.subcategory %}
       {% unless subs contains post.subcategory %}
@@ -30,7 +21,7 @@ layout: default
 
         <div class="post">
           <h2 class="post-title">
-            <a href="#sub-{{ sub }}">
+            <a href="{{ '/categories/' | append: page.category | append: '/' | append: sub | append: '/' | relative_url }}">
               {{ label }}
             </a>
           </h2>
@@ -42,28 +33,5 @@ layout: default
       {% endfor %}
     </div>
   {% endif %}
+
 {% endif %}
-
-{%- comment -%} ======================
-   글 목록 (기존)
-====================== {%- endcomment -%}
-
-<div class="posts">
-  {% for post in posts %}
-    <div class="post" id="sub-{{ post.subcategory }}">
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
-      </h2>
-
-      <time datetime="{{ post.date | date_to_xmlschema }}"
-            class="post-meta">
-        {{ post.date | date_to_string }}
-        {% if post.subcategory %}
-          · {{ site.data.subcategories[page.category][post.subcategory] }}
-        {% endif %}
-      </time>
-    </div>
-  {% endfor %}
-</div>
