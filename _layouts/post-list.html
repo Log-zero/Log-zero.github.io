@@ -2,6 +2,10 @@
 layout: default
 ---
 
+<p style="color:red">
+  page.posts = {{ page.posts | inspect }}
+</p>
+
 <div class="posts">
   {% assign posts = page.posts | default: site.posts %}
 
