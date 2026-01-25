@@ -1,20 +1,48 @@
 ---
-layout: page
+layout: default
 ---
 
-<div class="post-list">
+<div class="posts">
   {% assign posts = page.posts | default: site.posts %}
 
+  {% if paginator and page.posts == nil %}
+    {% assign posts = paginator.posts %}
+  {% endif %}
+
   {% for post in posts %}
-    <article class="post-card">
-      <a class="post-card-link" href="{{ post.url | relative_url }}">
-        <div class="post-card-content">
-          <h2 class="post-card-title">{{ post.title }}</h2>
-          <time class="post-card-date">
-            {{ post.date | date: "%d %b %Y" }}
-          </time>
-        </div>
-      </a>
-    </article>
+    <div class="post">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <time datetime="{{ post.date | date_to_xmlschema }}"
+            class="post-meta">
+        {{ post.date | date_to_string }}
+      </time>
+    </div>
   {% endfor %}
 </div>
+
+{% if paginator and page.posts == nil %}
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a class="pagination-item older"
+         href="{{ paginator.next_page_path | relative_url }}">
+        Older
+      </a>
+    {% else %}
+      <span class="pagination-item older">Older</span>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+      <a class="pagination-item newer"
+         href="{{ paginator.previous_page_path | relative_url }}">
+        Newer
+      </a>
+    {% else %}
+      <span class="pagination-item newer">Newer</span>
+    {% endif %}
+  </div>
+{% endif %}
