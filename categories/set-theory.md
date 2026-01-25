@@ -4,17 +4,17 @@ title: A. 집합론
 permalink: /categories/set-theory/
 ---
 
-{% assign category = "set-theory" %}
+<div class="post-list">
+{% for post in site.categories["set-theory"] %}
+  <article class="post-item">
+    <a class="post-link" href="{{ post.url | relative_url }}">
+      <h2 class="post-title">{{ post.title }}</h2>
 
-<ul class="post-list">
-{% for post in site.categories[category] %}
-  <li>
-    <a href="{{ post.url | relative_url }}">
-      {{ post.title }}
+      <div class="post-meta">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </div>
+
     </a>
-    <span class="post-meta">
-      {{ post.date | date: "%Y-%m-%d" }}
-    </span>
-  </li>
+  </article>
 {% endfor %}
-</ul>
+</div>
