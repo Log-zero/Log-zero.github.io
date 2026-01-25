@@ -1,37 +1,26 @@
 ---
-layout: post-list
+layout: default
 ---
 
 <div class="posts">
-  {% assign posts = site.posts %}
-  {% if paginator %}
-    {% assign posts = paginator.posts %}
-  {% endif %}
-  {% for post in posts %}
-    <div class="post">
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
-      </h2>
+  {% assign cats = site.categories | sort %}
 
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-meta">{{ post.date | date_to_string }}</time>
+  {% for cat in cats %}
+    {% assign name = cat[0] %}
+    {% assign posts = cat[1] %}
 
-    </div>
+    {% if posts.size > 0 %}
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ '/categories/' | append: name | append: '/' | relative_url }}">
+            {{ name }}
+          </a>
+        </h2>
+
+        <time class="post-meta">
+          {{ posts | size }} posts
+        </time>
+      </div>
+    {% endif %}
   {% endfor %}
 </div>
-
-{% if paginator %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-    {% else %}
-      <span class="pagination-item older">Older</span>
-    {% endif %}
-    {% if paginator.previous_page %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | relative_url }}">Newer</a>
-    {% else %}
-      <span class="pagination-item newer">Newer</span>
-    {% endif %}
-  </div>
-{% endif %}
