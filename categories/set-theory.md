@@ -5,15 +5,19 @@ permalink: /categories/set-theory/
 ---
 
 <div class="post-list">
-{% for post in site.categories["set-theory"] %}
-  <article class="post-item">
-    <a class="post-link" href="{{ post.url | relative_url }}">
-      <h2 class="post-title">{{ post.title }}</h2>
+{% assign posts = site.categories["set-theory"] | sort: "date" | reverse %}
+{% for post in posts %}
+  <article class="post-card">
+    <a class="post-card-link" href="{{ post.url | relative_url }}">
+      <div class="post-card-content">
+        <h2 class="post-card-title">
+          {{ post.title }}
+        </h2>
 
-      <div class="post-meta">
-        {{ post.date | date: "%Y-%m-%d" }}
+        <time class="post-card-date">
+          {{ post.date | date: "%d %b %Y" }}
+        </time>
       </div>
-
     </a>
   </article>
 {% endfor %}
