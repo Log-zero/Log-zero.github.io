@@ -61,7 +61,7 @@ layout: default
 
   <h2 class="breadcrumb-title">
     <a href="/categories/{{ page.category }}/">
-      {{ site.data.category_names[page.category] | default: page.category }}
+      {{ site.data.categories[page.category] | default: page.category }}
     </a>
     &nbsp;&gt;&nbsp;
     {{ page.title }}
