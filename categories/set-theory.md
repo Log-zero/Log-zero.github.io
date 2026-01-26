@@ -1,6 +1,7 @@
 ---
 layout: post-list
+page_type: category
 title: A. 집합론
-permalink: /categories/set-theory/
 category: set-theory
+category_label: A. 집합론
 ---
