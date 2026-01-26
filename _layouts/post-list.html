@@ -2,41 +2,80 @@
 layout: default
 ---
 
-<header class="category-header">
+{% assign posts = site.posts %}
 
-  {% if page.page_type == "category" %}
-    <h1 class="category-title">
-      {{ page.category_label }}
-    </h1>
-  {% endif %}
+{% if page.category %}
+  {% assign posts = site.categories[page.category] %}
+{% endif %}
 
-  {% if page.page_type == "subcategory" %}
-    <nav class="breadcrumb">
-      <a href="/categories/{{ page.category }}/">
-        {{ page.category_label }}
-      </a>
-      <span class="breadcrumb-sep">›</span>
-      <span class="breadcrumb-current">
-        {{ page.subcategory_label }}
-      </span>
-    </nav>
-  {% endif %}
+{%- comment -%}
+================================
+1️⃣ 카테고리 인덱스 페이지
+   (subcategory만 표시)
+================================
+{%- endcomment -%}
 
-</header>
+{% if page.category and page.subcategory == nil %}
 
-<div class="posts">
-  {% if page.page_type == "subcategory" %}
-    {% assign posts = site.posts | where: "subcategory", page.subcategory %}
-  {% else %}
-    {% assign posts = site.posts | where: "category", page.category %}
-  {% endif %}
-
+  {% assign subs = "" | split: "" %}
   {% for post in posts %}
-    <div class="post">
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <time class="post-meta">{{ post.date | date_to_string }}</time>
-    </div>
+    {% if post.subcategory %}
+      {% unless subs contains post.subcategory %}
+        {% assign subs = subs | push: post.subcategory %}
+      {% endunless %}
+    {% endif %}
   {% endfor %}
-</div>
+
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <div class="posts">
+    {% for sub in subs %}
+      {% assign label = site.data.subcategories[page.category][sub] | default: sub %}
+
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ '/categories/' | append: page.category | append: '/' | append: sub | append: '/' | relative_url }}">
+            {{ label }}
+          </a>
+        </h2>
+
+        <time class="post-meta">
+          {{ posts | where: "subcategory", sub | size }} posts
+        </time>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endif %}
+
+{%- comment -%}
+================================
+2️⃣ Subcategory 페이지
+   (글 목록 표시)
+================================
+{%- endcomment -%}
+
+{% if page.category and page.subcategory %}
+
+  {% assign posts = posts | where: "subcategory", page.subcategory %}
+
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  <div class="posts">
+    {% for post in posts %}
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+
+        <time datetime="{{ post.date | date_to_xmlschema }}"
+              class="post-meta">
+          {{ post.date | date_to_string }}
+        </time>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endif %}
