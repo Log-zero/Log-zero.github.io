@@ -50,16 +50,16 @@ layout: default
 
           {% if page.subcategory %}
             {% assign sub_slug = page.subcategory %}
-            {% assign sub_name = site.data.subcategory_names[sub_slug] | default: sub_slug %}
+            {% assign sub_name = site.data.subcategories[cat_slug][sub_slug] | default: sub_slug %}
 
             <span class="post-subcategory">
-              ›
-              <a class="post-category"
-                 href="{{ '/categories/' | append: cat_slug | append: '/' | append: sub_slug | append: '/' | relative_url }}">
-                {{ sub_name }}
-              </a>
+            ›
+            <a class="post-category"
+            href="{{ '/categories/' | append: cat_slug | append: '/' | append: sub_slug | append: '/' | relative_url }}">
+            {{ sub_name }}
+            </a>
             </span>
-          {% endif %}
+         {% endif %}
         </li>
       {% endfor %}
     </ul>
