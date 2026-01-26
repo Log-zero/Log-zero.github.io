@@ -54,7 +54,8 @@ layout: default
 
             <span class="post-subcategory">
               ›
-              <a href="{{ '/categories/' | append: cat_slug | append: '/' | append: sub_slug | append: '/' | relative_url }}">
+              <a class="post-category"
+                 href="{{ '/categories/' | append: cat_slug | append: '/' | append: sub_slug | append: '/' | relative_url }}">
                 {{ sub_name }}
               </a>
             </span>
