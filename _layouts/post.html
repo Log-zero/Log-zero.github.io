@@ -35,24 +35,32 @@ layout: default
   <span> • </span>
   <span class="post-categories-section">
     <i class="post-categories-icon fas fa-folder"></i>
+
     <ul class="post-categories">
       {% for category in page.categories %}
-      {% assign slug = category %}
-      {% assign display_name = site.data.categories[slug] | default: category %}
+        {% assign cat_slug = category %}
+        {% assign cat_name = site.data.categories[cat_slug] | default: cat_slug %}
 
-      <li>
-        <a class="post-category"
-          href="{{ '/categories/' | append: slug | append: '/' | relative_url }}">
-          {{ display_name }}
-        </a>
+        <li>
+          <!-- category -->
+          <a class="post-category"
+             href="{{ '/categories/' | append: cat_slug | append: '/' | relative_url }}">
+            {{ cat_name }}
+          </a>
 
-        {% if page.subcategory %}
-          <span class="post-subcategory">
-            › {{ page.subcategory }}
-          </span>
-        {% endif %}
-      </li>
-    {% endfor %}
+          {% if page.subcategory %}
+            {% assign sub_slug = page.subcategory %}
+            {% assign sub_name = site.data.subcategory_names[sub_slug] | default: sub_slug %}
+
+            <span class="post-subcategory">
+              ›
+              <a href="{{ '/categories/' | append: cat_slug | append: '/' | append: sub_slug | append: '/' | relative_url }}">
+                {{ sub_name }}
+              </a>
+            </span>
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
   </span>
 {% endif %}
