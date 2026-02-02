@@ -132,6 +132,10 @@ abbr[data-original-title] {
 
 /* blockquotes */
 
+blockquote {
+  outline: 3px solid red !important;
+}
+
 .post-content blockquote {
   margin: 4em 0;
   padding: 0 !important;
