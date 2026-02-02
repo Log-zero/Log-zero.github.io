@@ -15,14 +15,15 @@
 @import "custom/image";
 @import "custom/adsense";
 
-blockquote {
+.page__content blockquote {
   margin: 4em 0;
   padding: 0;
+  text-align: center;
   border: none;
   background: none;
   font-style: normal;
 }
 
-blockquote p {
+.page__content blockquote p {
   margin: 0;
 }
