@@ -1,3 +1,7 @@
+body {
+  background: red !important;
+}
+
 .post-content blackquote.quote {
   text-align: center;
   margin: 4em 0;
