@@ -57,3 +57,16 @@ figcaption.align-left {
 figcaption.align-center {
   text-align: center;
 }
+
+/* Blockquote customization */
+.page__content blockquote {
+  margin: 4em 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font-style: normal;
+}
+
+.page__content blockquote p {
+  margin: 0;
+}
