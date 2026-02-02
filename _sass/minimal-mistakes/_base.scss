@@ -132,7 +132,7 @@ abbr[data-original-title] {
 
 /* blockquotes */
 
-blockquote {
+.post-content blockquote {
   margin: 4em 0;
   padding: 0;
   text-align: center;
@@ -146,6 +146,10 @@ blockquote {
       padding-right: 5px;
     }
   }
+}
+
+.post-content blockquote p {
+  margin: 0;
 }
 
 /* links */
