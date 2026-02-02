@@ -26,3 +26,15 @@
 .page__content blockquote p {
   margin: 0;
 }
+
+html::before {
+  content: "MAIN CSS LOADED";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
