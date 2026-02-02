@@ -133,31 +133,20 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  outline: 3px solid red !important;
-}
-
-.post-content blockquote {
-  margin: 4em 0;
-  padding: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  text-align: center;
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
   font-style: italic;
-}
+  border-left: 0.25em solid $primary-color;
 
-.post-content blockquote::before,
-.post-content blockquote::after {
-  content: none !important;
-}
+  cite {
+    font-style: italic;
 
-.post-content blockquote p {
-  margin: 0;
-}
-
-.post-content blockquote cite::before {
-  content: "— ";
-  padding-right: 5px;
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
 }
 
 /* links */
