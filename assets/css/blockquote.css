@@ -1,8 +1,4 @@
-body {
-  background: red !important;
-}
-
-.post-content blackquote.quote {
+.post-content blockquote.quote {
   text-align: center;
   margin: 4em 0;
   padding: 0;
