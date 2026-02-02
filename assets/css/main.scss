@@ -15,26 +15,14 @@
 @import "custom/image";
 @import "custom/adsense";
 
-.page__content blockquote {
+blockquote {
   margin: 4em 0;
   padding: 0;
   border: none;
-  box-shadow: none;
   background: none;
-
-  text-align: center;
-  font-style: italic;
+  font-style: normal;
 }
 
-.page__content blockquote::before,
-.page__content blockquote::after {
-  content: none;
-}
-
-.page__content blockquote p {
+blockquote p {
   margin: 0;
-}
-
-.page__content blockquote cite::before {
-  content: "— ";
 }
