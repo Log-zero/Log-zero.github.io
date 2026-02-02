@@ -133,11 +133,9 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  margin: 4em 0;
+  padding: 0;
+  border: none;
 
   cite {
     font-style: italic;
