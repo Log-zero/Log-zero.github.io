@@ -1,12 +1,12 @@
-.page__content blockquote.quote {
-  all: unset;
-  display: block;
-  text-align: center;
+article.post blockquote {
   margin: 4em 0;
+  padding: 0;
+  border: none;
+  text-align: center;
 }
 
-.page__content blockquote.quote p {
-  all: unset;
-  display: block;
+article.post blockquote p {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
