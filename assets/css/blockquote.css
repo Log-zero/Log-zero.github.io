@@ -1,6 +1,12 @@
 .page__content blockquote.quote {
-  text-align: center !important;
-  margin: 4em 0 !important;
-  padding: 0 !important;
-  border: none !important;
+  all: unset;
+  display: block;
+  text-align: center;
+  margin: 4em 0;
+}
+
+.page__content blockquote.quote p {
+  all: unset;
+  display: block;
+  text-align: center;
 }
