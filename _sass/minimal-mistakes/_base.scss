@@ -134,11 +134,17 @@ abbr[data-original-title] {
 
 .post-content blockquote {
   margin: 4em 0;
-  padding: 0;
-  border: none;
-  background: none;
+  padding: 0; !important
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
   text-align: center;
   font-style: italic;
+}
+
+.post-content blockquote::before,
+.post-content blockquote::after {
+  content: none !important;
 }
 
 .post-content blockquote p {
