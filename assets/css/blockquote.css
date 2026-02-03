@@ -8,6 +8,7 @@ article.post blockquote {
   border: none;
   text-align: center;
   font-style: normal;
+  line-height: 2;
 }
 
 article.post blockquote p {
