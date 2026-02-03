@@ -11,6 +11,14 @@ article.post blockquote {
   font-style: normal;
 }
 
+article.post blockquote.callout {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+  font-style: normal;
+}
+
 article.post blockquote p {
   margin: 0;
   padding: 0;
