@@ -1,8 +1,14 @@
+blockquote::before,
+blockquote::after {
+  content: none;
+}
+
 article.post blockquote {
   margin: 1em 0;
   padding: 0;
   border: none;
   text-align: center;
+  font-style: normal;
 }
 
 article.post blockquote p {
