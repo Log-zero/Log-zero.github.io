@@ -9,9 +9,6 @@ article.post blockquote {
   border: none;
   text-align: center;
   font-style: normal;
-  background: rgba(255, 0, 0, 0.1);
-}
-  
 }
 
 article.post blockquote p {
