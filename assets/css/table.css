@@ -1,0 +1,9 @@
+/* 기본: h3 위 여백 */
+article.post h3 {
+  margin-top: 3em;
+}
+
+/* 예외: h3 바로 위에 h3가 있으면 여백 제거 */
+article.post h3 + h3 {
+  margin-top: 0;
+}
