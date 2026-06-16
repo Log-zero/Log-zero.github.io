@@ -93,18 +93,41 @@ layout: default
   {% endif %}
 </article>
 
-{% if site.related_posts != empty %}
+{% assign related_count = 0 %}
+
+{% capture related_posts %}
+  {% for post in site.posts %}
+    {% if post.url != page.url
+          and post.subcategory == page.subcategory %}
+
+      {% assign related_count = related_count | plus: 1 %}
+
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+
+        <small>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date_to_string }}
+          </time>
+        </small>
+      </li>
+
+      {% if related_count >= 7 %}
+        {% break %}
+      {% endif %}
+
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+{% if related_count > 0 %}
   <aside class="related">
     <h2 class="related-title">Related posts</h2>
+
     <ul class="related-posts">
-      {% for post in site.related_posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-        </li>
-      {% endfor %}
+      {{ related_posts }}
     </ul>
   </aside>
 {% endif %}
