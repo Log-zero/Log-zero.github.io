@@ -1,12 +1,15 @@
 .term {
+  color: inherit
   font-weight: 700;
 }
 
 .term .paren {
+  color : inherit
   font-weight: 400;
 }
 
 .term :lang(en) {
+  color: inherit
   font-family: 'NimbusRoman', serif;
   font-weight: 400;
 }
