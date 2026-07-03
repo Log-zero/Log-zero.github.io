@@ -11,7 +11,7 @@ article.post blockquote {
   font-style: normal;
 }
 
-article.post blockquote.callout {
+article.post blockquote.box {
   margin: 0;
   padding: 2em 0 2em 0;
   border-left: none;
