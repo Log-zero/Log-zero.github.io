@@ -45,10 +45,10 @@ div.callout[data-callout] .callout-title-inner {
 }
 
 /* 목록 예쁘게 */
-.markdown-body div.callout[data-callout] > ul,
-.markdown-body div.callout[data-callout] > ol,
-div.callout[data-callout] > ul,
-div.callout[data-callout] > ol {
+.markdown-body div.callout[data-callout] ul,
+.markdown-body div.callout[data-callout] ol,
+div.callout[data-callout] ul,
+div.callout[data-callout] ol {
   margin: 0.4em 0 0.6em 0;
   padding-left: 1em;
   color: #000;
