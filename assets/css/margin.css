@@ -8,8 +8,8 @@ article.post h3 + h3 {
   margin-top: 0;
 }
 
-/* ul, ol 여백 제거 */
-ol,
-ul {
+/* details 내부 ul, ol 여백 제거 */
+details ul,
+details ol {
     margin-left: 0 !important;
 }
