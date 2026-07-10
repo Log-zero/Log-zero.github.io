@@ -7,3 +7,9 @@ article.post h3 {
 article.post h3 + h3 {
   margin-top: 0;
 }
+
+/* ul, ol 여백 제거 */
+ol,
+ul {
+    margin-left: 0;
+}
