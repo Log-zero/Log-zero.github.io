@@ -11,5 +11,5 @@ article.post h3 + h3 {
 /* ul, ol 여백 제거 */
 ol,
 ul {
-    margin-left: 0;
+    margin-left: 0; !important
 }
