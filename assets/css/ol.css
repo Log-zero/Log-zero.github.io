@@ -1,15 +1,4 @@
-ol[type="i"] {
-  list-style: none;
-  counter-reset: roman;
-  padding-left: 1em;
-}
-
-ol[type="i"] > li {
-  counter-increment: roman;
-}
-
-ol[type="i"] > li::before {
-  content: "(" counter(roman, lower-roman) ") ";
-  font-family: 'NimbusRoman';
-  font-weight: 400;
+ol[type="1"] > li::marker,
+ol[type="i"] > li::marker {
+    font-family: 'NimbusRoman', serif;
 }
