@@ -1,0 +1,14 @@
+ol[type="i"] {
+  list-style: none;
+  counter-reset: roman
+}
+
+ol[type="i"] > li {
+  counter-increment: roman;
+}
+
+ol[type="i"] > li::before {
+  content: "(" counter(roman, lower-roman) ") ";
+  font-family: 'NimbusRoman';
+  font-weight: 400;
+}
