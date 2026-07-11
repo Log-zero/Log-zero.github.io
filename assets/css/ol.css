@@ -1,6 +1,7 @@
 ol[type="i"] {
   list-style: none;
-  counter-reset: roman
+  counter-reset: roman;
+  padding-left: 1em;
 }
 
 ol[type="i"] > li {
