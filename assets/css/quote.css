@@ -42,7 +42,7 @@ div.callout[data-callout] .callout-title::before {
 .markdown-body div.callout[data-callout] .callout-title-inner,
 div.callout[data-callout] .callout-title-inner {
   color: var(--callout-color);
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 /* 목록 예쁘게 */
