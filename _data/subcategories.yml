@@ -1,5 +1,5 @@
 set-theory:
   basic-logic: "(A1) 기초 논리학"
   set-function: "(A2) 집합, 관계, 함수"
-  number-system: "(A3) 자연수, 정수, 유리수체"
-  real-number: "(A4) 실수, 완비순서체"
+  number-system: "(A3) 자연수, 정수"
+  real-number: "(A4) 유리수체, 실수체"
